@@ -1,8 +1,11 @@
 import subprocess
 
+link = 'https://faspex.cancerimagingarchive.net/aspera/faspex/external_deliveries/259?passcode=caf2906b2acd7345a7f275ba96475214dc0c1bf9#"'
+
 class Download():
-    def __init__(self, download_dir='asperaDownloads'):
+    def __init__(self, download_link=link, download_dir='asperaDownloads'):
         self.download_dir = download_dir
+        self.download_link = download_link
     
     def download(self):
         # List of commands to run to install dependencies
@@ -18,7 +21,7 @@ class Download():
             "gem install net-smtp -v 0.3.0",
             "gem install aspera-cli",
             "ascli conf ascp install"
-            f"!ascli faspex package recv --url=https://faspex.cancerimagingarchive.net/aspera/faspex --username=none --password=none --to-folder={self.download_dir} https://faspex.cancerimagingarchive.net/aspera/faspex/external_deliveries/259?passcode=caf2906b2acd7345a7f275ba96475214dc0c1bf9#"
+            f"!ascli faspex package recv --url=https://faspex.cancerimagingarchive.net/aspera/faspex --username=none --password=none --to-folder={self.download_dir} {self.download_link}"
         ]
 
         # Run each command
