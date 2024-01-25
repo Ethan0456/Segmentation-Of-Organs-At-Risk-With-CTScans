@@ -1,10 +1,3 @@
-# Download Data
+# Segmentation Of Organs At Risk With CT-Scan
 
-```
-from data.Download import Download
-
-# Default Download dir 'asperaDownloads'
-# Default Data CT-Org
-# Parameters : download_link, download_dir
-data_downloader = Download().download()
-```
+![Poster-Presentatin-Image](./Poster-Final-Image.jpeg)
