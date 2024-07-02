@@ -1,6 +1,5 @@
 import numpy as np
 
-
 class Padding:
     def __init__(self, input_shape=(512,512,75), desired_depth=128):
         self.input_shape = input_shape
